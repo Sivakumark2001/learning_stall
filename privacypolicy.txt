@@ -1,5 +1,5 @@
 [ PRIVACY POLICY for sivafacts Alexa Skill ]
-Last updated on 16 May 2020
+Last updated on 16 May 2020 change
 
 This Statement of Privacy applies to our practices in connection with the Alexa voice skill, i.e. 'skill' or 'Alexa skill' Protecting your private information is our priority. This Privacy Policy describes the treatment of information collected and posted on the Alexa skill siva App Studio (the ?Company?) fully respects your (hereinafter referred to as 'You', 'Your', 'User') right to privacy and would like to safeguard the information you provide to the Company and will not use or collect any personal information on this Alexa skill without your permission. Any Personal information which you voluntarily submit/provide to the Company will be treated with the highest standard of security and confidentiality and shall be used strictly for the purposes of the services provided by the Company and Alexa skill only. By using the Alexa skill, You consent to the data practices described in this statement.
 
