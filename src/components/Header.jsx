@@ -15,7 +15,7 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" className="header-title">
-        Learning Stall
+        Learning Stall 😎
       </Link>
       {user && (
         <button
