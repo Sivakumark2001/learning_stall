@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "File Manager",
+    "description": "An interactive file explorer that allows users to create folders and files in a hierarchical tree structure, mimicking a real-world file system. Users can add new folders or files at any level, expand/collapse folders, and view file contents. This component demonstrates dynamic tree data handling and recursive UI rendering in React.",
+    "link": "/problem/1",
+    "difficulty": "Easy",
+    "videoUrl": "https://youtu.be/20F_KzHPpvI?si=Ee-MM04GA26VD-WO"
+  }
+]

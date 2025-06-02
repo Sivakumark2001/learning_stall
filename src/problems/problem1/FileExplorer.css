@@ -1,0 +1,22 @@
+.folder, .file {
+    padding: 5px;
+    font : 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.folder:hover, .file:hover {
+    background-color: #f0f0f0;
+}
+
+.folder {
+    background-color: #e0f7fa;
+}
+
+.folder-container, .file-container, .input-container {
+    padding-left: 20px;
+    margin-top: 10px;
+}

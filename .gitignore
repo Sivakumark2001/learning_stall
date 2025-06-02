@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Backend
+backend-node
+
 # Firebase
 .firebase/
 

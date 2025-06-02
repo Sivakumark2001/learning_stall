@@ -1,0 +1,44 @@
+.home-page {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60,72,88,0.10), 0 2px 8px rgba(60,72,88,0.08);
+}
+
+.home-page h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.problem-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.problem-item {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 14px;
+}
+
+.problem-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(26,35,126,0.13), 0 2px 8px rgba(26,35,126,0.07);
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    padding: 1rem 0.5rem;
+  }
+  .problem-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}

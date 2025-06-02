@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./App.css";
 import { useAuth } from "./context/AuthContext";
+import HomePage from "./Pages/HomePage";
+import FileExplorer from "./problems/problem1/FileExplorer";
 
 function AppLayout({ children }) {
   const location = useLocation();
@@ -32,7 +34,15 @@ function App() {
             path="/"
             element={
               <ProtectedRoute>
-                <StudentGridPage />
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/problem/1"
+            element={
+              <ProtectedRoute>
+                <FileExplorer />
               </ProtectedRoute>
             }
           />
