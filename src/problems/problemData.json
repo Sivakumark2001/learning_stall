@@ -6,5 +6,13 @@
     "link": "/problem/1",
     "difficulty": "Easy",
     "videoUrl": "https://youtu.be/20F_KzHPpvI?si=Ee-MM04GA26VD-WO"
+  },
+  {
+    "id": 2,
+    "title": "Pagination",
+    "description": "Pagination handlingh both in front end and backend. This component allows users to navigate through large datasets by breaking them into smaller, manageable pages. It includes features like page size selection, next/previous navigation, and dynamic data loading based on the current page.",
+    "link": "/problem/2",
+    "difficulty": "Easy",
+    "videoUrl": "https://youtu.be/cBsB7hhOzQI?si=S0wxs_V66RF_HKbZ"
   }
 ]

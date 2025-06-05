@@ -173,3 +173,43 @@ To use the DataTable in your component:
 - **Row Deletion:** Provide `onDeleteRow` to enable row deletion.
 
 For a full example, see [`StudentGridPage`](src/Pages/StudentGridPage.jsx).
+
+-------------------------------------------------------------------------
+
+## Problem 1: File Manager
+
+**Description:**  
+An interactive file explorer that allows users to create folders and files in a hierarchical tree structure, mimicking a real-world file system. Users can add new folders or files at any level, expand/collapse folders, and view file contents. This component demonstrates dynamic tree data handling and recursive UI rendering in React.
+
+**Features:**
+- Add folders and files at any level
+- Expand/collapse folders to navigate the hierarchy
+- View file contents
+- Uses immutable state updates for reliable React rendering
+
+**Implementation:**  
+See [`FileExplorer`](src/problems/problem1/FileExplorer.jsx) and [`Folder`](src/problems/problem1/components/Folder.jsx).
+
+**Demo:**  
+Navigate to `/problem/1` after login.
+
+-------------------------------------------------------------------------
+
+## Problem 2: Pagination
+
+**Description:**  
+A product list with pagination, demonstrating both frontend pagination logic and integration with a backend API. Users can navigate through large datasets by breaking them into smaller, manageable pages. Features include page size selection, next/previous navigation, and dynamic data loading based on the current page.
+
+**Features:**
+- Fetches product data from an external API
+- Pagination controls with page numbers and next/previous buttons
+- Animated product cards using Framer Motion
+- Loading indicator while fetching data
+
+**Implementation:**  
+See [`Product`](src/problems/problem2/components/Product.jsx).
+
+**Demo:**  
+Navigate to `/problem/2` after login.
+
+-------------------------------------------------------------------------

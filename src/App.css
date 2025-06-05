@@ -86,3 +86,98 @@
   font-size: 0.95em;
   padding: 0;
 }
+
+/* Add to App.css */
+.hightech-header {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  border-bottom: 2px solid #00eaff;
+  box-shadow: 0 2px 16px 0 rgba(0,255,255,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.hightech-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px #00eaff99;
+}
+
+.hightech-gradient-text {
+  background: linear-gradient(90deg, #00eaff 0%, #00ffb3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.hightech-logout {
+  border: 1.5px solid #00eaff;
+  background: transparent;
+  color: #00eaff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.5em 1.4em;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 1px 6px #00eaff33;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Add to App.css or Header.css */
+.professional-header {
+  background: #fff;
+  border-bottom: 1px solid #e3e8ee;
+  box-shadow: 0 2px 8px 0 rgba(60,72,88,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.7rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.professional-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.35em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+
+.professional-title:hover {
+  color: #1976d2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.professional-logout {
+  border: 1px solid #1976d2;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.4em 1.2em;
+  font-family: inherit;
+  font-size: 1em;
+  box-shadow: 0 1px 4px #1976d222;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.professional-logout:hover {
+  background: #1251a3;
+  color: #fff;
+  box-shadow: 0 2px 8px #1976d244;
+}
