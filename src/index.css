@@ -1,3 +1,30 @@
+/* Theme variables */
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #fff;
+  --text-main: #213547;
+  --text-secondary: #444;
+  --header-bg: #fff;
+  --box-shadow: 0 2px 16px 0 rgba(60,72,88,0.10), 0 1.5px 6px 0 rgba(60,72,88,0.08);
+  --accent-main: #1a237e;
+}
+
+[data-theme="dark"] {
+  --bg-main: #181c23;
+  --bg-card: #23272f;
+  --text-main: #e3e9f7;
+  --text-secondary: #b0b8c1;
+  --header-bg: #23272f;
+  --box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25), 0 1.5px 6px 0 rgba(0,0,0,0.18);
+  --accent-main: #90caf9; /* Lighter blue for dark mode */
+}
+
+body {
+  background: var(--bg-main) !important;
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
 /* DataTable default styles */
 .datatable-table {
   width: 100%;
@@ -122,6 +149,16 @@
   min-width: 320px;
   max-width: 90vw;
   color: black;
+}
+
+body {
+  background: transparent !important;
+}
+
+/* Add to src/index.css or App.css */
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
 }
 
 @media (max-width: 700px) {

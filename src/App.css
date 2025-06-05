@@ -2,11 +2,39 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
 }
 
 .main-content {
   flex: 1 0 auto;
   padding: 2rem;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
+.header,
+.professional-header {
+  background: var(--header-bg) !important;
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Remove or comment out this block if present, as it overrides the theme: */
+/*
+.app-layout,
+.main-content,
+.home-page {
+  background: transparent !important;
+}
+*/
+
+.footer {
+  background: var(--header-bg) !important;
+  color: var(--text-secondary);
+  transition: background 0.3s, color 0.3s;
 }
 
 .header {
@@ -14,22 +42,33 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #f5f7fa;
   border-bottom: 1px solid #e0e6ed;
 }
 
 .header-title {
   text-decoration: none;
-  color: #213547;
+  color: var(--text-main);
   font-weight: 700;
   font-size: 1.2em;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.header-title:hover {
+  color: #42a5f5;
+  text-shadow: 0 0 8px #42a5f5cc;
+  transform: scale(1.05);
+}
+
+[data-theme="dark"] .header-title {
+  color: #fff;
+  text-shadow: 0 0 8px #42a5f5cc;
 }
 
 .header-logout-btn {
   padding: 0.5em 1.2em;
   border-radius: 6px;
   border: 1px solid #e0e6ed;
-  background: #fff;
   font-weight: 600;
   cursor: pointer;
 }
@@ -37,7 +76,6 @@
 .footer {
   text-align: center;
   padding: 1rem 0;
-  background: #f5f7fa;
   border-top: 1px solid #e0e6ed;
   color: #888;
   margin-top: 2rem;
@@ -129,7 +167,6 @@
 
 /* Add to App.css or Header.css */
 .professional-header {
-  background: #fff;
   border-bottom: 1px solid #e3e8ee;
   box-shadow: 0 2px 8px 0 rgba(60,72,88,0.06);
   position: sticky;
@@ -180,4 +217,12 @@
   background: #1251a3;
   color: #fff;
   box-shadow: 0 2px 8px #1976d244;
+}
+
+.home-page {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: transparent !important;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60,72,88,0.10), 0 2px 8px rgba(60,72,88,0.08);
 }

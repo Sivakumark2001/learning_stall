@@ -213,3 +213,64 @@ See [`Product`](src/problems/problem2/components/Product.jsx).
 Navigate to `/problem/2` after login.
 
 -------------------------------------------------------------------------
+
+## Theme Styling
+
+This project supports both **light** and **dark** themes, allowing users to toggle between them for a comfortable and accessible experience. The theme system is implemented using React Context and CSS variables for seamless and efficient styling.
+
+### How Theme Handling Works
+
+#### 1. Theme Context
+
+- The app uses a `ThemeContext` (`src/context/ThemeContext.jsx`) to manage the current theme (`light` or `dark`) and provide a `toggleTheme` function.
+- The selected theme is saved in `localStorage` so your preference persists across sessions.
+- When the theme changes, a `data-theme` attribute is set on the `<body>` element, which is used by CSS to apply the correct styles.
+
+#### 2. CSS Variables
+
+- Theme colors and styles are defined using CSS variables in `src/index.css`.
+- There are two sets of variables: one for light mode (`:root`) and one for dark mode (`[data-theme="dark"]`).
+- Example variables:
+  ```css
+  :root {
+    --bg-main: #f8fafc;
+    --text-main: #213547;
+    --accent-main: #1a237e;
+    /* ... */
+  }
+  [data-theme="dark"] {
+    --bg-main: #181c23;
+    --text-main: #e3e9f7;
+    --accent-main: #90caf9;
+    /* ... */
+  }
+  ```
+
+#### 3. Applying Theme Styles
+
+- All main containers and components use these variables for their backgrounds, text, and accent colors (e.g., `background: var(--bg-main); color: var(--text-main);`).
+- When the theme is toggled, the CSS variables update automatically, and all components reflect the new theme instantly.
+
+#### 4. Theme Toggle Button
+
+- A theme toggle button is available in the header.
+- Clicking the button switches between light and dark themes using the `toggleTheme` function from the context.
+
+#### 5. Extending Theme Support
+
+- To add theme support to new components, use the defined CSS variables for colors and backgrounds.
+- Example:
+  ```css
+  .my-component {
+    background: var(--bg-card);
+    color: var(--text-main);
+  }
+  ```
+
+### Summary
+
+- **Centralized theme management** using React Context and CSS variables.
+- **Instant, global theme switching** with a single toggle.
+- **Easy to extend**: Use the provided CSS variables in your custom components for consistent theming.
+
+---

@@ -1,37 +1,56 @@
+/* Problem Card Base */
 .problem-card {
-  background: #fff;
+  background: transparent !important;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   margin: 1.5rem 0;
   max-width: 400px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.3s, color 0.3s;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
+  color: var(--text-main);
+  animation: fadeInCard 0.8s;
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 .problem-card:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07);
 }
 
+.problem-card h3,
+.product__single h3 {
+  color: var(--accent-main);
+}
+
 .problem-card h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.35rem;
-  color: #1a237e;
+  color: var(--text-main);
   font-weight: 700;
   letter-spacing: 0.02em;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .problem-card h3 {
+  color: #fff;
 }
 
 .problem-card p {
   margin: 0.2rem 0;
-  color: #444;
+  color: var(--text-main);
   font-size: 1rem;
+  transition: color 0.3s;
 }
 
 .problem-card a {
-  color: #1976d2;
+  color: #42a5f5;
   text-decoration: none;
   font-weight: 600;
   margin-top: 0.5rem;
@@ -40,13 +59,17 @@
 }
 
 .problem-card a:hover {
-  color: #0d47a1;
+  color: #90caf9;
   text-decoration: underline;
 }
 
 .problem-card b {
-  color: #388e3c;
+  color: #66bb6a;
   font-weight: 700;
+}
+
+[data-theme="dark"] .problem-card b {
+  color: #b9f6ca;
 }
 
 .problem-video {
@@ -54,7 +77,7 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(26,35,126,0.08);
-  background: #f5f7fa;
+  background: transparent !important;
   display: flex;
   justify-content: center;
 }

@@ -26,7 +26,7 @@ const ProblemCard = ({ problem }) => {
     >
       <div className="problem-card">
         <h3>
-          <FaFolderOpen style={{ marginRight: 8, color: "#1a237e" }} />
+          <FaFolderOpen style={{ marginRight: 8}} />
           #{problem.id} {problem.title}
         </h3>
         <p>{problem.description}</p>

@@ -7,14 +7,15 @@
     justify-content: space-between;
     width: 500px;
     align-items: center;
+    background: transparent !important;
 }
 
 .folder:hover, .file:hover {
-    background-color: #f0f0f0;
+    background-color: transparent !important;
 }
 
 .folder {
-    background-color: #e0f7fa;
+    background-color: transparent !important;
 }
 
 .folder-container, .file-container, .input-container {

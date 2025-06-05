@@ -11,12 +11,15 @@ import { useAuth } from "./context/AuthContext";
 import HomePage from "./Pages/HomePage";
 import FileExplorer from "./problems/problem1/FileExplorer";
 import Product from "./problems/problem2/components/Product";
+import ParticleBackground from "./components/ParticleBackground";
+
 
 function AppLayout({ children }) {
   const location = useLocation();
   const hideHeader = location.pathname === "/login" || location.pathname === "/register";
   return (
     <div className="app-layout">
+      <ParticleBackground />
       {!hideHeader && <Header />}
       <main className="main-content">{children}</main>
       <Footer />
@@ -62,6 +65,14 @@ function App() {
           <Route
             path="/register"
             element={currentUser ? <Navigate to="/" /> : <Register onRegister={() => {}} />}
+          />
+          <Route
+            path="/datagrid"
+            element={
+              <ProtectedRoute>
+                <StudentGridPage />
+              </ProtectedRoute>
+            }
           />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
