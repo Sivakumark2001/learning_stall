@@ -29,11 +29,11 @@ const Folder = ({ exploreData, handleAddItems }) => {
                 <div className="folder-container">
                     <div className="folder" onClick={() => { setShowChildren(!showChildren); setShowInput({ show: false, isFolder: null }) }}>
                         <span>
-                            {showChildren ? "📂" : "📁"}
+                            {showChildren ? "📂 " : "📁 "}
                             {exploreData.name}</span>
                         <div>
                             <button
-                                className="btn btn-primary"
+                                className="btn btn-primary mx-2"
                                 onClick={(e) => handleShowInput(e, exploreData.id, true)}
                             >
                                 Folder +
