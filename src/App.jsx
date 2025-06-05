@@ -10,6 +10,7 @@ import "./App.css";
 import { useAuth } from "./context/AuthContext";
 import HomePage from "./Pages/HomePage";
 import FileExplorer from "./problems/problem1/FileExplorer";
+import Product from "./problems/problem2/components/Product";
 
 function AppLayout({ children }) {
   const location = useLocation();
@@ -43,6 +44,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <FileExplorer />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/problem/2"
+            element={
+              <ProtectedRoute>
+                <Product />
               </ProtectedRoute>
             }
           />
