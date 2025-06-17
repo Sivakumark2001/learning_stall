@@ -1,0 +1,24 @@
+[
+  {
+    "question": "Which account is debited when cash is received from a customer?",
+    "options": {
+      "A": "Sales Account",
+      "B": "Cash Account",
+      "C": "Customer Account",
+      "D": "Capital Account"
+    },
+    "correctAnswer": "B",
+    "explanation": "Cash Account is debited when cash is received."
+  },
+  {
+    "question": "What is the main objective of an audit?",
+    "options": {
+      "A": "To detect fraud",
+      "B": "To verify accounts",
+      "C": "To prepare balance sheet",
+      "D": "To calculate profit"
+    },
+    "correctAnswer": "B",
+    "explanation": "The main objective is to verify the accounts."
+  }
+]
