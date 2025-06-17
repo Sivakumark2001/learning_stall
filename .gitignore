@@ -30,3 +30,4 @@ backend-node
 *.sw?
 
 .env
+.env.example
