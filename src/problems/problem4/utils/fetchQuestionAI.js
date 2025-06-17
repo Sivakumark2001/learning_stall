@@ -1,7 +1,7 @@
 import MOCK_QUESTIONS from "./mockQuestions.json";
 
-const HUGGINGFACE_API_URL = "https://api-inference.huggingface.co/models/gpt2";
-const HUGGINGFACE_API_KEY = "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"; // Add your key if available
+const HUGGINGFACE_API_URL = "";
+const HUGGINGFACE_API_KEY = ""; // Add your key if available
 
 export async function fetchQuestionAI({ subject, module, level }) {
   // Prompt engineering
