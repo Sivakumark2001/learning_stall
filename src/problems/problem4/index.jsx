@@ -3,7 +3,6 @@ import QuizConfigurator from "./components/QuizConfigurator";
 import QuizQuestion from "./components/QuizQuestion";
 import QuestionNavigation from "./components/QuestionNavigation";
 import ResultSummary from "./components/ResultSummary";
-import { fetchQuestionAI } from "./utils/fetchQuestionAI"; // Only use this
 import { useAIQuestionGenerator } from "./hooks/useAIQuestionGenerator";
 import QuizLoading from "./components/QuizLoading";
 

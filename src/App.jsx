@@ -11,6 +11,8 @@ import { useAuth } from "./context/AuthContext";
 import HomePage from "./Pages/HomePage";
 import FileExplorer from "./problems/problem1/FileExplorer";
 import Product from "./problems/problem2/components/Product";
+import LayoutBuilder from "./problems/problem3/LayoutBuilder";
+import Problem4 from "./problems/problem4/index.jsx";
 import ParticleBackground from "./components/ParticleBackground";
 
 
@@ -55,6 +57,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <Product />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/problem/3"
+            element={
+              <ProtectedRoute>
+                <LayoutBuilder />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/problem/4"
+            element={
+              <ProtectedRoute>
+                <Problem4 />
               </ProtectedRoute>
             }
           />

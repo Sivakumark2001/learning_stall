@@ -14,6 +14,8 @@ const navLinks = [
     children: [
       { label: "Problem 1: File Manager", path: "/problem/1" },
       { label: "Problem 2: Pagination", path: "/problem/2" },
+      { label: "Problem 3: Layout Builder", path: "/problem/3" },
+      { label: "Problem 4: AI Quiz", path: "/problem/4" },
     ],
   },
   { label: "Data Grid", path: "/datagrid", icon: <FaTable /> },
