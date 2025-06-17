@@ -28,3 +28,6 @@ backend-node
 *.njsproj
 *.sln
 *.sw?
+
+.env
+.env.example
