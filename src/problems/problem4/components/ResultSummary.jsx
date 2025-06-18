@@ -29,13 +29,19 @@ function ResultSummary({ questions, userAnswers, onRestart }) {
   return (
     <motion.div
       className="card shadow-lg p-4 mx-auto mt-5"
-      style={{ maxWidth: 600 }}
+      style={{
+        maxWidth: 600,
+        background: "var(--bg-card)",
+        color: "var(--text-main)",
+      }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <h2 className="mb-4 text-primary">Test Summary</h2>
-      <div className="mb-2">Score: {correct} / {total} ({percent}%)</div>
+      <div className="mb-2">
+        Score: {correct} / {total} ({percent}%)
+      </div>
       <div className="mb-2 text-info fw-semibold">{getQuote(percent)}</div>
       <div className="mb-4">
         <b>Details:</b>

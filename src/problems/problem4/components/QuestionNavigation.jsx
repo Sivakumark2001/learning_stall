@@ -12,7 +12,7 @@ function QuestionNavigation({
 }) {
   return (
     <motion.div
-      className="d-flex align-items-center justify-content-center gap-2 mt-4"
+      className="d-flex align-items-center justify-content-center gap-2 mt-4 flex-row flex-wrap"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

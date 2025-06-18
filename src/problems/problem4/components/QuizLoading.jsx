@@ -32,7 +32,13 @@ function QuizLoading() {
   }, []);
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: 320 }}>
+    <div
+      className="d-flex flex-column align-items-center justify-content-center"
+      style={{
+        minHeight: 320,
+        color: "var(--text-main)"
+      }}
+    >
       <motion.div
         style={{
           width: 64,

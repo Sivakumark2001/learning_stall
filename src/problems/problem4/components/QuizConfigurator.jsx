@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { DIFFICULTY_LEVELS } from "../utils/constants";
 import { motion } from "framer-motion";
+import "./QuizConfigurator.css";
 
 function QuizConfigurator({ onStart }) {
   const [subjectInput, setSubjectInput] = useState("");
@@ -36,15 +37,16 @@ function QuizConfigurator({ onStart }) {
 
   return (
     <motion.div
-      className="card shadow-lg p-4 mx-auto mt-5"
-      style={{ maxWidth: 500 }}
+      className="quiz-config-card"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <h2 className="mb-4 text-primary">Configure Your Test</h2>
       <div className="mb-3">
-        <label className="form-label fw-bold">Subjects:</label>
+        <label className="form-label fw-bold">
+          Subjects <span style={{ color: "red" }}>*</span>
+        </label>
         <div className="d-flex gap-2 mb-2">
           <input
             className="form-control"
@@ -56,6 +58,9 @@ function QuizConfigurator({ onStart }) {
           <button className="btn btn-outline-primary" type="button" onClick={handleAddSubject}>
             Add
           </button>
+        </div>
+        <div className="form-text mb-1 text-warning" style={{ fontSize: "0.97em" }}>
+          <span style={{ color: "red" }}>*</span> Click <b>Add</b> after typing each subject to include it.
         </div>
         <div className="d-flex flex-wrap gap-2">
           {subjects.map(subj => (
@@ -73,7 +78,9 @@ function QuizConfigurator({ onStart }) {
         </div>
       </div>
       <div className="mb-3">
-        <label className="form-label fw-bold">Topics:</label>
+        <label className="form-label fw-bold">
+          Topics <span style={{ color: "red" }}>*</span>
+        </label>
         <div className="d-flex gap-2 mb-2">
           <input
             className="form-control"
@@ -85,6 +92,9 @@ function QuizConfigurator({ onStart }) {
           <button className="btn btn-outline-primary" type="button" onClick={handleAddTopic}>
             Add
           </button>
+        </div>
+        <div className="form-text mb-1 text-warning" style={{ fontSize: "0.97em" }}>
+          <span style={{ color: "red" }}>*</span> Click <b>Add</b> after typing each topic to include it.
         </div>
         <div className="d-flex flex-wrap gap-2">
           {topics.map(topic => (
@@ -102,7 +112,9 @@ function QuizConfigurator({ onStart }) {
         </div>
       </div>
       <div className="mb-3">
-        <label className="form-label fw-bold">Difficulty:</label>
+        <label className="form-label fw-bold">
+          Difficulty <span style={{ color: "red" }}>*</span>
+        </label>
         <div className="d-flex gap-2">
           {DIFFICULTY_LEVELS.map((level) => (
             <div className="form-check me-3" key={level}>
@@ -122,14 +134,16 @@ function QuizConfigurator({ onStart }) {
         </div>
       </div>
       <div className="mb-3">
-        <label className="form-label fw-bold">Number of Questions:</label>
+        <label className="form-label fw-bold">
+          Number of Questions <span style={{ color: "red" }}>*</span>
+        </label>
         <input
           type="number"
           min={1}
           max={20}
           className="form-control"
           value={questionCount}
-          onChange={e => setQuestionCount(Math.max(1, Math.min(20, Number(e.target.value))))}
+          onChange={e => setQuestionCount(e.target.value)}
           style={{ width: 120 }}
         />
         <div className="form-text text-warning">
@@ -149,7 +163,7 @@ function QuizConfigurator({ onStart }) {
             subjects,
             topics,
             levels: selectedLevels,
-            questionCount,
+            questionCount: Number(questionCount) || 1,
           })
         }
       >

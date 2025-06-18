@@ -1,0 +1,156 @@
+/* Base styles (keep your existing desktop styles) */
+.card {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+  background: var(--bg-main, #fff);
+  color: var(--text-main, #213547);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 0.8em;
+  font-size: 0.97em;
+  border-radius: 12px;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  color: var(--text-main, #213547);
+  background: var(--bg-card, #fff);
+}
+
+.btn-close {
+  margin-left: 0.5em;
+  font-size: 0.9em;
+}
+
+/* Quiz config card styles */
+.quiz-config-card {
+  background: var(--bg-card, #fff);
+  color: var(--text-main, #213547);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60,72,88,0.10), 0 2px 8px rgba(60,72,88,0.08);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin: 2.5rem auto 1.5rem auto;
+  max-width: 540px;
+  min-width: 320px;
+  width: 100%;
+  transition: box-shadow 0.2s, background 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.quiz-config-card .form-label {
+  font-size: 1.08em;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+.quiz-config-card .d-flex {
+  flex-wrap: wrap;
+  gap: 0.7em;
+}
+
+.quiz-config-card .badge {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+  height: 33px;
+}
+
+.quiz-config-card .form-control {
+  min-width: 180px;
+  max-width: 260px;
+}
+
+.quiz-config-card .form-check {
+  margin-bottom: 0.2em;
+}
+
+.quiz-config-card .btn {
+  min-width: 70px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 700px) {
+  .card {
+    max-width: 98vw;
+    padding: 1.1rem 0.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+  }
+  .form-label {
+    font-size: 1em;
+  }
+  .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .gap-2, .gap-3 {
+    gap: 0.5rem !important;
+  }
+  .badge {
+    font-size: 0.95em;
+    padding: 0.4em 0.7em;
+    margin-bottom: 0.2em;
+  }
+  .btn-close {
+    font-size: 0.85em;
+  }
+  input.form-control {
+    font-size: 1em;
+    padding: 0.6em 0.7em;
+    color: var(--text-main, #213547);
+    background: var(--bg-card, #fff);
+  }
+  button.btn {
+    font-size: 1em;
+    min-height: 44px;
+    margin-top: 0.3em;
+    color: var(--text-main, #213547);
+    background: var(--bg-card, #fff);
+  }
+  .form-text {
+    font-size: 0.97em;
+  }
+  .quiz-config-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+    min-width: 0;
+  }
+  .quiz-config-card .form-control {
+    min-width: 0;
+    max-width: 100%;
+  }
+}

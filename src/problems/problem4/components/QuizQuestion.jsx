@@ -31,7 +31,12 @@ function QuizQuestion({
   return (
     <motion.div
       className="card shadow-lg p-4 mx-auto mt-5"
-      style={{ maxWidth: 600 }}
+      style={{
+        maxWidth: 600,
+        width: "100%",
+        background: "var(--bg-card)",
+        color: "var(--text-main)",
+      }}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -55,11 +60,14 @@ function QuizQuestion({
         {Object.entries(questionObj.options).map(([key, val], idx) => {
           // Map key ("1", "2", ...) to letter ("A", "B", ...)
           const letter = String.fromCharCode(65 + idx); // 65 is "A"
-          let btnClass = "btn btn-outline-secondary text-start";
+          let btnClass = "btn btn-outline-secondary text-start w-100";
           if (selectedAnswer) {
             if (letter === questionObj.correctAnswer) {
               btnClass = "btn btn-success text-white fw-bold";
-            } else if (key === selectedAnswer && letter !== questionObj.correctAnswer) {
+            } else if (
+              key === selectedAnswer &&
+              letter !== questionObj.correctAnswer
+            ) {
               btnClass = "btn btn-danger text-white fw-bold";
             } else {
               btnClass = "btn btn-outline-secondary opacity-75";
