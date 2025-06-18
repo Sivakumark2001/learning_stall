@@ -25,13 +25,13 @@ export const useAIQuestionGenerator = () => {
     setError(null);
 
     const difficultyText = levels.length
-      ? `The questions should cover these difficulty levels (in order): ${levels.join(", ")}.`
+      ? `if more than one question requested, then The questions should cover these difficulty levels (in order): ${levels.join(", ")}.`
       : "";
 
     const prompt = `
 You are an expert exam question generator.
 
-Generate ${count} multiple-choice questions based on the subject "${subject}" and "${topic}".
+Generate only ${count} multiple-choice questions based on the subject "${subject}" and "${topic}".
 ${difficultyText}
 Response format:
 question:::Your question text here|||options:::Option A;Option B;Option C;Option D|||correctAnswer:::A|||explanation:::Brief explanation of the correct answer???
@@ -54,7 +54,6 @@ question:::Which account is debited when cash is received from a customer?|||opt
       });
 
       console.log('AI Response:', response);
-      debugger
 
       const rawText = response.message.content.trim();
       console.log('Raw AI Response:', rawText);

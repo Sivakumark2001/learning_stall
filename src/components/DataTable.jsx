@@ -159,48 +159,50 @@ const DataTable = ({
         )}
       </div>
       {renderFilterModal()}
-      <table className={getClass("table")}>
-        <thead>
-          <tr>
-            {columns.map((col) => (
-              <th key={col.accessor} className={getClass("th")}>
-                <span style={{ display: "flex", alignItems: "center" }}>
-                  {col.header}
-                  {renderSortButtons(col)}
-                </span>
-              </th>
-            ))}
-            {onDeleteRow && (
-              <th className={getClass("actionTh")}>
-                Actions
-              </th>
-            )}
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.map((row, idx) => (
-            <tr key={idx} className={getClass("tr")}>
+      <div style={{ overflowX: "auto" }}>
+        <table className={getClass("table")}>
+          <thead>
+            <tr>
               {columns.map((col) => (
-                <td key={col.accessor} className={getClass("td")}>
-                  {renderers[col.accessor]
-                    ? renderers[col.accessor](row[col.accessor], row)
-                    : row[col.accessor]}
-                </td>
+                <th key={col.accessor} className={getClass("th")}>
+                  <span style={{ display: "flex", alignItems: "center" }}>
+                    {col.header}
+                    {renderSortButtons(col)}
+                  </span>
+                </th>
               ))}
               {onDeleteRow && (
-                <td className={getClass("actionTd")}>
-                  <button
-                    className={getClass("deleteButton")}
-                    onClick={() => onDeleteRow(row, idx)}
-                  >
-                    Delete
-                  </button>
-                </td>
+                <th className={getClass("actionTh")}>
+                  Actions
+                </th>
               )}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {tableData.map((row, idx) => (
+              <tr key={idx} className={getClass("tr")}>
+                {columns.map((col) => (
+                  <td key={col.accessor} className={getClass("td")}>
+                    {renderers[col.accessor]
+                      ? renderers[col.accessor](row[col.accessor], row)
+                      : row[col.accessor]}
+                  </td>
+                ))}
+                {onDeleteRow && (
+                  <td className={getClass("actionTd")}>
+                    <button
+                      className={getClass("deleteButton")}
+                      onClick={() => onDeleteRow(row, idx)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
